@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light box cards</title>
+</head>
+<body class="bg-neutral-100">
+
+<dialog class="" id="slide">
+  <div class="flex overflow-x-auto snap-x"></div>
+  <button class="text-black absolute top-0 right-0" id="close">
+    <!-- x-mark outline https://heroicons.com/ -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</dialog>
+
+<div class="text-center">
+	<a class="hover:underline underline-offset-2" href="https://zummon.page/" target="_blank">Made by zummon</a>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 xl:gap-10 p-6 md:p-8 xl:p-10 mx-auto max-w-2xl" id="grid"></div>
+
+<script>
+  var slideElem = document.querySelector('#slide')
+  var closeElem = document.querySelector('#close')
+  var gridElem = document.querySelector('#grid')
+  
+  closeElem.addEventListener('click', function() {
+    slideElem.close()
+  })
+  gridElem.addEventListener('click', function() {
+    slideElem.showModel()
+  })
+</script>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
