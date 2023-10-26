@@ -46,7 +46,7 @@ document.querySelector('#grid').innerHTML = items.map((item) => `
 `).join('')
 
 document.querySelector('#slide').firstElementChild.innerHTML = items.map((item) => `
-<div class="flex-none snap-center">
-	<img class="w-screen" src="${item['img-src']}" alt="${item['img-caption']}">
+<div class="flex-none w-full snap-center">
+	<img class="max-w-full" src="${item['img-src']}" alt="${item['img-caption']}">
 </div>
 `).join('')
